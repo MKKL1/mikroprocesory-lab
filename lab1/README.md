@@ -3,7 +3,7 @@
 
 Wszystkie programy mają być napisane w języku asemblera dla procesora AVR, uruchomione i przetestowane.
 
-Treści zadań:
+# Treści zadań:
 
 We wszystkich poniższych zadaniach uwzględnia się, że w rzeczywistym układzie jeden z zacisków każdego z używanych przycisków dołączony jest do odpowiedniej linii portu,
 a drugi do masy układu. W konsekwencji przyciśnięcie przycisku powoduje zwarcie linii portu do masy (wymuszenie 0 na linii wejściowej). 
@@ -19,26 +19,29 @@ W szczególności konstruując program o wariantowym sposobie działania nie uż
 ponieważ skutkiem takiego sposobu jest niedopuszczalna multiplikacja znaczącej częsci kodu takich bloków!
 
 
-
-1) Opracować, uruchomić i przetestować program powodujący, że w trakcie, gdy przycisk dołączony do linii PA.1 jest niewciśnięty, dioda LED dołączona do linii
+## Zadanie 1
+Opracować, uruchomić i przetestować program powodujący, że w trakcie, gdy przycisk dołączony do linii PA.1 jest niewciśnięty, dioda LED dołączona do linii
  PA.0 NIE ŚWIECI. Gdy gdy przycisk dołączony do linii PA.1 jest wciśnięty, dioda LED dołączona do linii PA.0 wykonuje cyklicznie następującą animację:
-a) krok #1 - dioda LED świeci przez 500ms,
-b) krok #2 - dioda LED nie świeci przez 500ms.
+
+* krok #1 - dioda LED świeci przez 500ms,
+
+* krok #2 - dioda LED nie świeci przez 500ms.
+
 W każdym kroku animacji program jednokrotnie sprawdza stan przycisku i reaguje, jak wyżej. Użyć rozkazów operujących na pojedynczych bitach.
 Do realizacji opóźnienia użyć pętli opóźniającej/ych umieszczonej/ych w odpowiednch miejscach w kodzie programu.
 Przykładowy generator pętli opóźniającej dla AVR można znaleźć pod adresem: http://darcy.rsgc.on.ca/ACES/TEI4M/AVRdelay.html
 Poza pętlami opóźnienia używać (w miarę możliwości) rozkazów operujących na pojedynczych bitach.
 W celu zorganizowania programu nie należy używać procedur.  
 
-
-2) Do mikrokontrolera dołączone są diody LED w nastepujący sposób: LED0|LED1|LED2|LED3	-	PA0(PortA)|PB0(PortB)|PC0(PortC)|PD0(PortD).
+## Zadanie 2
+Do mikrokontrolera dołączone są diody LED w nastepujący sposób: LED0|LED1|LED2|LED3	-	PA0(PortA)|PB0(PortB)|PC0(PortC)|PD0(PortD).
 Do linii 7  w Port A dołączony jest przycisk "A", natomiast do linii 7 w Port D dołączony jest przycisk "B".
 Opracować program powodujący, że w zależności od stanu przycisków świecenie diod LED jest następujące:
-a) przyciski nieprzyciśnięte:
+* przyciski nieprzyciśnięte:
 	OFF|ON|ON|ON
-b) przycisk A przyciśnięty (niezależnie od stanu przycisku B)
+* przycisk A przyciśnięty (niezależnie od stanu przycisku B)
 	dioda podłączona do PA0 pozostaje w stanie ON
-b) przycisk B przyciśnięty (niezależnie od stanu przycisku A)
+* przycisk B przyciśnięty (niezależnie od stanu przycisku A)
 	dioda podłączona do PD0 pozostaje w stanie OFF
 Używać rozkazów operujących na pojedynczych bitach. W celu zorganizowania programu nie należy używać procedur.
 
