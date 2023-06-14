@@ -1,0 +1,2 @@
+﻿Schemat do programu proteus, połączenia z wyświetlaczem (1,2,3,4) zapewne są inne na płytkach na laboratoriach
+![schemat](https://raw.githubusercontent.com/MKKL1/mikroprocesory-lab/main/lab7/schemat%20do%20zadania%201.png)
